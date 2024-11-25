@@ -37,3 +37,9 @@ map("t", "<C-t>", "<C-\\><C-n>:ToggleTerm<CR>", opts) -- Fecha no modo terminal
 map("n", "<Leader>tf", ":ToggleTerm direction=float<CR>", opts) -- Terminal flutuante
 map("n", "<Leader>th", ":ToggleTerm direction=horizontal<CR>", opts) -- Terminal horizontal
 map("n", "<Leader>tv", ":ToggleTerm direction=vertical<CR>", opts) -- Terminal vertical
+
+-- Sair do modo TERMINAL para o modo NORMAL com Esc
+map("t", "<Esc>", "<C-\\><C-n>", opts)
+
+-- Voltar para o terminal ativo (caso deseje usar <Esc> no modo normal)
+map("n", "<Esc>", ":startinsert<CR>", opts)
