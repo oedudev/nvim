@@ -9,6 +9,10 @@ map("n", "<C-s>", ":w<CR>", opts)
 map("n", "<C-n>", ":Neotree toggle<CR>", opts)
 map("n", "<C-z>", ":undo<CR>", opts)
 
+map("n", "<C-x>", function()
+  Snacks.bufdelete()
+end, { desc = "Delete Buffer" })
+
 map("n", "q", ":q<CR>", opts)
 
 -- Aumentar largura com Alt+Right
